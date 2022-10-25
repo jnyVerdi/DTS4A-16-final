@@ -182,10 +182,7 @@ function Navbar() {
       >
         <MenuItem onClick={handleClose}>{userCredential.email}</MenuItem>
         <MenuItem onClick={() => handleClose(dispatch(signOutAsync()))}>
-          <Link
-            to='/sign_up'
-            style={{ color: 'inherit', textDecoration: 'inherit' }}
-          >
+          <Link to='/sign_up' className='link-to'>
             Sign out
           </Link>
         </MenuItem>
@@ -196,12 +193,12 @@ function Navbar() {
   );
   const signUpAndSignInButton = (
     <Stack spacing={2} direction='row'>
-      <Link to='/sign_in'>
+      <Link to='/sign_in' className='link-to'>
         <Button sx={{ backgroundColor: '#334155' }} variant='contained'>
           Sign in
         </Button>
       </Link>
-      <Link to='/sign_up'>
+      <Link to='/sign_up' className='link-to'>
         <Button sx={{ backgroundColor: '#334155' }} variant='contained'>
           Sign up
         </Button>
@@ -210,10 +207,10 @@ function Navbar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box className='navbar-box'>
       <AppBar position='static'>
         <Toolbar>
-          <Link to='/' style={{ color: 'inherit', textDecoration: 'none' }}>
+          <Link to='/' className='link-to'>
             <Typography
               variant='h6'
               noWrap
@@ -235,6 +232,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
+                className='navbar-page'
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -243,7 +241,7 @@ function Navbar() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 1 }} />
+          <Box className='navbar-box' />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {window.location.pathname === '/sign_up' ||
             window.location.pathname === '/sign_in' ||
