@@ -1,0 +1,46 @@
+[
+  {
+    "user": {
+      "uid": "7VsBdQl3pFTV46dgrJ139EbzEWG3",
+      "email": "kelinci2@gmail.com",
+      "emailVerified": false,
+      "isAnonymous": false,
+      "providerData": [
+        {
+          "providerId": "password",
+          "uid": "kelinci2@gmail.com",
+          "displayName": null,
+          "email": "kelinci2@gmail.com",
+          "phoneNumber": null,
+          "photoURL": null
+        }
+      ],
+      "stsTokenManager": {
+        "refreshToken": "AOEOulYOdbCsD7p6UJ1RpDkGprh0bwbm2HXjeju9ibAzUNe1G_H5x9WIRvtiWJTXY--Rv1u53hHO4Ijxrkwz0CvGEapjD3f8E9NM7aSxb2pQzchmKsB98p2gUYXxMhsoWlpkyxcqstZG4KmdwpXZgle7OzY0jh8b47ohw3fZfdJriGD-uQ6zLeGV0t0Xy6cRwrFeV1LsR5L6uWGNUpwa3ucwH-bHSDRyuA",
+        "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjNmNjcyNDYxOTk4YjJiMzMyYWQ4MTY0ZTFiM2JlN2VkYTY4NDZiMzciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmF3LXRvbWF0b2VzIiwiYXVkIjoicmF3LXRvbWF0b2VzIiwiYXV0aF90aW1lIjoxNjY2NTY0NzExLCJ1c2VyX2lkIjoiN1ZzQmRRbDNwRlRWNDZkZ3JKMTM5RWJ6RVdHMyIsInN1YiI6IjdWc0JkUWwzcEZUVjQ2ZGdySjEzOUViekVXRzMiLCJpYXQiOjE2NjY1NjQ3MTEsImV4cCI6MTY2NjU2ODMxMSwiZW1haWwiOiJrZWxpbmNpMkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsia2VsaW5jaTJAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.HEHpXv1ni2P_-njYKIfcArWiNfdng2ZuMhufUcrVAFLO2apIfkURdRgXZJPDzpxrSb_x7yCl2MjgXaHsmJRKni2RxYRZuUmwQ_lFLB6JsY6A2xyU_94-7aFW4sv_6h07w-J53x9VS0UTF2NyyF4J4_q4s-iEjYyPXyyJQztIJmxUdtizX_FjI06Ly7lDhWW_cs3UnGDU9iKYAiCj5rnvYbxCRIdxH7kcVdg7cxIVzg2AiII58nCR120oOQA46-Yr_WX3327pM66Pz5J_TCrdfZ8PAvcKPRCubTBnVqDH32xY3CkMp8SKeMJPMX2ucFDWjBaA702H12x_QG4qjCspNQ",
+        "expirationTime": 1666568312182
+      },
+      "createdAt": "1666564711632",
+      "lastLoginAt": "1666564711632",
+      "apiKey": "AIzaSyBu9YmD1geOijM3z7s3YW_g4Qe0y9eS_xc",
+      "appName": "[DEFAULT]"
+    },
+    "providerId": null,
+    "_tokenResponse": {
+      "kind": "identitytoolkit#SignupNewUserResponse",
+      "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjNmNjcyNDYxOTk4YjJiMzMyYWQ4MTY0ZTFiM2JlN2VkYTY4NDZiMzciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmF3LXRvbWF0b2VzIiwiYXVkIjoicmF3LXRvbWF0b2VzIiwiYXV0aF90aW1lIjoxNjY2NTY0NzExLCJ1c2VyX2lkIjoiN1ZzQmRRbDNwRlRWNDZkZ3JKMTM5RWJ6RVdHMyIsInN1YiI6IjdWc0JkUWwzcEZUVjQ2ZGdySjEzOUViekVXRzMiLCJpYXQiOjE2NjY1NjQ3MTEsImV4cCI6MTY2NjU2ODMxMSwiZW1haWwiOiJrZWxpbmNpMkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsia2VsaW5jaTJAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.HEHpXv1ni2P_-njYKIfcArWiNfdng2ZuMhufUcrVAFLO2apIfkURdRgXZJPDzpxrSb_x7yCl2MjgXaHsmJRKni2RxYRZuUmwQ_lFLB6JsY6A2xyU_94-7aFW4sv_6h07w-J53x9VS0UTF2NyyF4J4_q4s-iEjYyPXyyJQztIJmxUdtizX_FjI06Ly7lDhWW_cs3UnGDU9iKYAiCj5rnvYbxCRIdxH7kcVdg7cxIVzg2AiII58nCR120oOQA46-Yr_WX3327pM66Pz5J_TCrdfZ8PAvcKPRCubTBnVqDH32xY3CkMp8SKeMJPMX2ucFDWjBaA702H12x_QG4qjCspNQ",
+      "email": "kelinci2@gmail.com",
+      "refreshToken": "AOEOulYOdbCsD7p6UJ1RpDkGprh0bwbm2HXjeju9ibAzUNe1G_H5x9WIRvtiWJTXY--Rv1u53hHO4Ijxrkwz0CvGEapjD3f8E9NM7aSxb2pQzchmKsB98p2gUYXxMhsoWlpkyxcqstZG4KmdwpXZgle7OzY0jh8b47ohw3fZfdJriGD-uQ6zLeGV0t0Xy6cRwrFeV1LsR5L6uWGNUpwa3ucwH-bHSDRyuA",
+      "expiresIn": "3600",
+      "localId": "7VsBdQl3pFTV46dgrJ139EbzEWG3"
+    },
+    "operationType": "signIn"
+  },
+  {
+    "error": {
+      "code": "auth/internal-error",
+      "customData": {},
+      "name": "FirebaseError"
+    }
+  }
+]
