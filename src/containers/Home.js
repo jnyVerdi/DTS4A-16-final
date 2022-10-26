@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
 import genreData from '../data/genre.json';
 import {
@@ -13,10 +13,31 @@ import {
 } from '@mui/material';
 import Navbar from '../components/Navbar';
 import TrendingCard from '../components/TrendingCard';
-import trending_list from '../data/trendinglist.json';
-import LatestCard from '../components/DiscoverCard';
+import DiscoverCard from '../components/DiscoverCard';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  discoverMovieAsync,
+  discoverTvAsync,
+  selectMovie,
+  selectTrending,
+  selectTv,
+  trendingAsync,
+} from '../reducers/tmdbSlice';
 
 function Home() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(trendingAsync());
+    dispatch(discoverMovieAsync());
+    dispatch(discoverTvAsync());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const trending = useSelector(selectTrending);
+  const movie = useSelector(selectMovie);
+  const tv = useSelector(selectTv);
+
   return (
     <Box>
       <Navbar />
@@ -41,8 +62,8 @@ function Home() {
           </Grid>
         </Grid>
         <Box className='trending-list-box'>
-          {trending_list.results.slice(0, 9).map((item) => (
-            <TrendingCard item={item} />
+          {trending.results.slice(0, 9).map((item) => (
+            <TrendingCard key={item.id} item={item} />
           ))}
         </Box>
       </Box>
@@ -71,8 +92,8 @@ function Home() {
               </Grid>
             </Box>
             <Box className='discover-list-box'>
-              {trending_list.results.slice(0, 15).map((item) => (
-                <LatestCard item={item} />
+              {movie.results.slice(0, 15).map((item) => (
+                <DiscoverCard key={item.id} item={item} />
               ))}
             </Box>
             <Box className='discover-box'>
@@ -97,8 +118,8 @@ function Home() {
               </Grid>
             </Box>
             <Box className='discover-list-box'>
-              {trending_list.results.slice(0, 15).map((item) => (
-                <LatestCard item={item} />
+              {tv.results.slice(0, 15).map((item) => (
+                <DiscoverCard key={item.id} item={item} />
               ))}
             </Box>
           </Grid>
@@ -111,7 +132,7 @@ function Home() {
             <Divider />
             <Box className='item-genre-box'>
               {genreData.map((genre) => (
-                <nav aria-label='secondary mailbox folders'>
+                <nav aria-label='secondary mailbox folders' key={genre.id}>
                   <List>
                     <ListItem disablePadding>
                       <ListItemButton>

@@ -3,7 +3,6 @@ import './TrendingCard.css';
 import { Card, CardActionArea, CardMedia } from '@mui/material';
 
 function TrendingCard({ item }) {
-  console.log(item);
   return (
     <Card className='trending-card-container'>
       <CardActionArea className='trending-media'>

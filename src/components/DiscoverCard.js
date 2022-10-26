@@ -1,8 +1,8 @@
 import React from 'react';
 import './DiscoverCard.css';
-import { Box, Button, Card, CardActionArea, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, Typography } from '@mui/material';
 
-function LatestCard({ item }) {
+function DiscoverCard({ item }) {
   return (
     <Card className='discover-card-container'>
       <CardActionArea title={item.name ? item.name : item.title}>
@@ -28,7 +28,11 @@ function LatestCard({ item }) {
               >
                 {`${item.vote_average}`.slice(0, 3)}
               </Typography>
-              <Typography variant='button' gutterBottom>
+              <Typography
+                variant='button'
+                gutterBottom
+                className='typography-year'
+              >
                 {item.release_date
                   ? new Date(item.release_date).getFullYear()
                   : new Date(item.first_air_date).getFullYear()}
@@ -41,4 +45,4 @@ function LatestCard({ item }) {
   );
 }
 
-export default LatestCard;
+export default DiscoverCard;

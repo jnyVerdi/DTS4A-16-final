@@ -7,6 +7,7 @@ import App from './App';
 import Home from './containers/Home';
 import SignUp from './containers/SignUp';
 import SignIn from './containers/SignIn';
+import Search from './containers/Search';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
       <Route path='/' element={<Home />} />
       <Route path='sign_up' element={<SignUp />} />
       <Route path='sign_in' element={<SignIn />} />
+      <Route path='search/:query' element={<Search />} />
       {/* <Route path="/" element={<MovieList />} />
     <Route path="about" element={<About />}>
       <Route path="description" element={<Box sx={{ mt: 10 }}>Provides movies in your hand</Box>} />

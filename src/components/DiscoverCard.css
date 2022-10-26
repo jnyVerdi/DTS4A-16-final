@@ -22,14 +22,13 @@
 }
 
 .typography-title {
-  margin-left: 5px;
   font-weight: bold;
   line-height: 18px;
 }
 
 .typography-rating {
   padding: 2px 6px 2px 6px;
-  margin: 5px;
+  margin-left: 10px;
   background-color: rgb(255, 230, 0);
   border-radius: 3px;
   color: black;
@@ -38,4 +37,8 @@
 .typography-rating-year {
   max-height: 50px;
   margin-top: -3px;
+}
+
+.typography-year {
+  padding-left: 15px;
 }

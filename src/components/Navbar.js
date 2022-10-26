@@ -14,7 +14,7 @@ import {
   Button,
   Stack,
 } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUserCredential, signOutAsync } from '../reducers/userSlice';
 
@@ -59,6 +59,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function Navbar() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const userCredential = useSelector(selectUserCredential);
 
@@ -206,6 +207,11 @@ function Navbar() {
     </Stack>
   );
 
+  const handleSearch = (event) => {
+    event.preventDefault();
+    if (event.key === 'Enter') navigate(`/search/${event.target.value}`);
+  };
+
   return (
     <Box className='navbar-box'>
       <AppBar position='static'>
@@ -227,6 +233,7 @@ function Navbar() {
             <StyledInputBase
               placeholder='Search…'
               inputProps={{ 'aria-label': 'search' }}
+              onKeyUp={handleSearch}
             />
           </Search>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>

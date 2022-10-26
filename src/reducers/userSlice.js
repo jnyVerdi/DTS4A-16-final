@@ -78,7 +78,7 @@ const userSlice = createSlice({
     setUser: (state, action) => {
       state.userCredential = action.payload.user;
     },
-    setErrorSign: (state, action) => {
+    setErrorSign: (state) => {
       state.errorSignUp = '';
       state.errorSignIn = '';
       state.errorSignOut = '';

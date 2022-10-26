@@ -46,7 +46,7 @@
 
 .discover-see-more {
   display: flex;
-  justify-content: end;
+  flex: end;
   margin-left: 50px;
   min-width: 105px;
 }

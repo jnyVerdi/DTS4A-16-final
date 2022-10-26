@@ -1,0 +1,10 @@
+.genre-box {
+  max-width: 300px !important;
+  max-height: 430px;
+}
+
+.item-genre-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
