@@ -9,7 +9,6 @@ import { Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 import { authObserverAsync } from './reducers/userSlice';
 import { useDispatch } from 'react-redux';
-import Footer from './components/Footer';
 
 function App() {
   const dispatch = useDispatch();
@@ -20,9 +19,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Paper className='container-main-background'>
+      <Paper className='container-background'>
         <Outlet />
-        <Footer />
       </Paper>
     </ThemeProvider>
   );

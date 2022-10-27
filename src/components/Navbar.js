@@ -14,7 +14,7 @@ import {
   Button,
   Stack,
 } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUserCredential, signOutAsync } from '../reducers/userSlice';
 
@@ -59,7 +59,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 function Navbar() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const userCredential = useSelector(selectUserCredential);
 
@@ -183,7 +182,10 @@ function Navbar() {
       >
         <MenuItem onClick={handleClose}>{userCredential.email}</MenuItem>
         <MenuItem onClick={() => handleClose(dispatch(signOutAsync()))}>
-          <Link to='/sign_up' className='link-to'>
+          <Link
+            to='/sign_up'
+            style={{ color: 'inherit', textDecoration: 'inherit' }}
+          >
             Sign out
           </Link>
         </MenuItem>
@@ -194,12 +196,12 @@ function Navbar() {
   );
   const signUpAndSignInButton = (
     <Stack spacing={2} direction='row'>
-      <Link to='/sign_in' className='link-to'>
+      <Link to='/sign_in'>
         <Button sx={{ backgroundColor: '#334155' }} variant='contained'>
           Sign in
         </Button>
       </Link>
-      <Link to='/sign_up' className='link-to'>
+      <Link to='/sign_up'>
         <Button sx={{ backgroundColor: '#334155' }} variant='contained'>
           Sign up
         </Button>
@@ -207,16 +209,11 @@ function Navbar() {
     </Stack>
   );
 
-  const handleSearch = (event) => {
-    event.preventDefault();
-    if (event.key === 'Enter') navigate(`/search/${event.target.value}`);
-  };
-
   return (
-    <Box className='navbar-box'>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static'>
         <Toolbar>
-          <Link to='/' className='link-to'>
+          <Link to='/' style={{ color: 'inherit', textDecoration: 'none' }}>
             <Typography
               variant='h6'
               noWrap
@@ -233,13 +230,11 @@ function Navbar() {
             <StyledInputBase
               placeholder='Search…'
               inputProps={{ 'aria-label': 'search' }}
-              onKeyUp={handleSearch}
             />
           </Search>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                className='navbar-page'
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -248,7 +243,7 @@ function Navbar() {
               </Button>
             ))}
           </Box>
-          <Box className='navbar-box' />
+          <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {window.location.pathname === '/sign_up' ||
             window.location.pathname === '/sign_in' ||

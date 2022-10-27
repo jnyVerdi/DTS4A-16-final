@@ -1,3 +1,7 @@
-.trending-card-container {
-  width: 130px;
+.trending-card {
+  display: flex;
+}
+
+.trending-img {
+  max-width: 135px;
 }
