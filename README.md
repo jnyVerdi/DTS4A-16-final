@@ -1,6 +1,8 @@
+This Frontend project is powered and created using React JS dan Firebase Auth, this project is very first development to be alpha version, we have implemented auth feature using Firebase Auth and in home page. We will keep continuing the development until it reach the satisfy interface.
+
 # DTS REA4 Final Project
 
-Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google.com/document/d/122KyWNQ4xxU4aFwWbM4vIfH7LM4AH2CZEZa3YsEHjCk). 
+Ketentuan lengkap bisa dilihat di [Final Project Guidelines](https://docs.google.com/document/d/122KyWNQ4xxU4aFwWbM4vIfH7LM4AH2CZEZa3YsEHjCk).
 
 ## Daftar pair
 
